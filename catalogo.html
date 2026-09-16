@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de productos | Ferretería Los Maestros</title>
+  <meta name="description" content="Catálogo de productos de Ferretería Los Maestros con stock disponible por categoría, marca y precio.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros
+      </a>
+      <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html" aria-current="page">Catálogo</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="cotizar.html">Cotizar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="contenedor">
+        <p class="migas"><a href="index.html">Inicio</a> / Catálogo</p>
+
+        <div class="titulo-seccion">
+          <h1>Catálogo de productos</h1>
+          <p>Muestra representativa de nuestro catálogo (+800 referencias en tienda). Filtra por categoría o busca por nombre para ver stock y precio.</p>
+        </div>
+
+        <form id="form-filtros" class="controles-catalogo" style="max-width:none; box-shadow:none; padding:0; background:transparent;" onsubmit="return false;">
+          <div class="campo-control">
+            <label for="buscar">Buscar producto</label>
+            <input type="search" id="buscar" name="buscar" placeholder="Ej: cemento, taladro, cable..." autocomplete="off">
+          </div>
+          <div class="campo-control">
+            <label for="filtro-categoria">Categoría</label>
+            <select id="filtro-categoria" name="categoria">
+              <option value="">Todas las categorías</option>
+            </select>
+          </div>
+          <div class="campo-control">
+            <label for="filtro-stock">Disponibilidad</label>
+            <select id="filtro-stock" name="stock">
+              <option value="">Todos</option>
+              <option value="disponible">Con stock disponible</option>
+              <option value="bajo">Stock bajo el mínimo</option>
+            </select>
+          </div>
+          <div class="campo-control">
+            <button type="button" id="boton-limpiar" class="boton boton-outline">Limpiar filtros</button>
+          </div>
+        </form>
+
+        <p id="contador-resultados" aria-live="polite"></p>
+
+        <div class="tabla-envoltorio">
+          <table class="tabla-catalogo">
+            <caption>Listado de productos disponibles en Ferretería Los Maestros</caption>
+            <thead>
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Unidad</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-catalogo">
+              <!-- Filas generadas dinámicamente por js/catalogo.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-alterna">
+      <div class="contenedor" style="text-align:center;">
+        <h2>¿No encontraste lo que buscabas?</h2>
+        <p>Contamos con más de 800 referencias en tienda. Cuéntanos qué necesitas y te confirmamos disponibilidad.</p>
+        <a href="cotizar.html" class="boton boton-primario">Solicitar cotización</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sitio-footer">
+    <div class="contenedor columnas-footer">
+      <div>
+        <h3>Ferretería Los Maestros</h3>
+        <p>Materiales de construcción, herramientas y ferretería general en La Serena, Región de Coquimbo.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="cotizar.html">Cotizar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>Av. Francisco de Aguirre 1234, La Serena</li>
+          <li>+56 9 1234 5678</li>
+          <li>contacto@losmaestros.cl</li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor linea-footer">
+      &copy; <span id="anio-actual"></span> Ferretería Los Maestros. Proyecto académico DSY1104 — Desarrollo Fullstack II.
+    </div>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/catalogo.js"></script>
+  <script src="js/comun.js"></script>
+</body>
+</html>
