@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de usuario | Ferretería Los Maestros</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div id="nav-sesion"></div>
+      </nav>
+      <div class="acciones-nav">
+        <a href="carrito.html" class="enlace-carrito" aria-label="Ver carrito de compras">
+          🛒<span class="contador-carrito" id="carrito-contador">0</span>
+        </a>
+        <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="contenedor">
+        <p class="migas"><a href="index.html">Inicio</a> / Registro</p>
+        <div class="titulo-seccion">
+          <h1>Crea tu cuenta</h1>
+          <p>Regístrate para comprar más rápido y ver el historial de tus pedidos.</p>
+        </div>
+
+        <form id="form-registro" novalidate>
+          <div id="alerta-formulario" class="alerta-formulario" role="alert"></div>
+
+          <div class="grupo-campo" data-campo="run">
+            <label for="run">RUN (sin puntos ni guion) <span class="requerido">*</span></label>
+            <input type="text" id="run" name="run" placeholder="Ej: 123456785" autocomplete="off" required minlength="7" maxlength="9">
+            <span class="mensaje-error" id="error-run"></span>
+          </div>
+
+          <div class="fila-doble">
+            <div class="grupo-campo" data-campo="nombre">
+              <label for="nombre">Nombre <span class="requerido">*</span></label>
+              <input type="text" id="nombre" name="nombre" autocomplete="given-name" maxlength="50" required>
+              <span class="mensaje-error" id="error-nombre"></span>
+            </div>
+            <div class="grupo-campo" data-campo="apellidos">
+              <label for="apellidos">Apellidos <span class="requerido">*</span></label>
+              <input type="text" id="apellidos" name="apellidos" autocomplete="family-name" maxlength="100" required>
+              <span class="mensaje-error" id="error-apellidos"></span>
+            </div>
+          </div>
+
+          <div class="grupo-campo" data-campo="correo">
+            <label for="correo">Correo electrónico <span class="requerido">*</span></label>
+            <input type="email" id="correo" name="correo" autocomplete="email" maxlength="100" placeholder="tu.correo@duoc.cl" required>
+            <small class="ayuda">Solo se aceptan correos @duoc.cl, @profesor.duoc.cl o @gmail.com.</small>
+            <span class="mensaje-error" id="error-correo"></span>
+          </div>
+
+          <div class="fila-doble">
+            <div class="grupo-campo" data-campo="clave">
+              <label for="clave">Contraseña <span class="requerido">*</span></label>
+              <input type="password" id="clave" name="clave" autocomplete="new-password" minlength="4" maxlength="10" required>
+              <small class="ayuda">Entre 4 y 10 caracteres.</small>
+              <span class="mensaje-error" id="error-clave"></span>
+            </div>
+            <div class="grupo-campo" data-campo="confirmar-clave">
+              <label for="confirmar-clave">Confirmar contraseña <span class="requerido">*</span></label>
+              <input type="password" id="confirmar-clave" name="confirmarClave" autocomplete="new-password" minlength="4" maxlength="10" required>
+              <span class="mensaje-error" id="error-confirmar-clave"></span>
+            </div>
+          </div>
+
+          <div class="grupo-campo" data-campo="telefono">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="+56912345678">
+            <span class="mensaje-error" id="error-telefono"></span>
+          </div>
+
+          <div class="fila-doble">
+            <div class="grupo-campo" data-campo="region">
+              <label for="region">Región <span class="requerido">*</span></label>
+              <select id="region" name="region" required>
+                <option value="">Seleccione la región</option>
+              </select>
+              <span class="mensaje-error" id="error-region"></span>
+            </div>
+            <div class="grupo-campo" data-campo="comuna">
+              <label for="comuna">Comuna <span class="requerido">*</span></label>
+              <select id="comuna" name="comuna" required disabled>
+                <option value="">Seleccione primero la región</option>
+              </select>
+              <span class="mensaje-error" id="error-comuna"></span>
+            </div>
+          </div>
+
+          <div class="grupo-campo" data-campo="direccion">
+            <label for="direccion">Dirección <span class="requerido">*</span></label>
+            <input type="text" id="direccion" name="direccion" maxlength="300" required>
+            <span class="mensaje-error" id="error-direccion"></span>
+          </div>
+
+          <button type="submit" class="boton boton-primario">Registrarme</button>
+          <p style="margin-top:1rem;">¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sitio-footer">
+    <div class="contenedor columnas-footer">
+      <div>
+        <h3>Ferretería Los Maestros</h3>
+        <p>Materiales de construcción, herramientas y ferretería general en La Serena, Región de Coquimbo.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>Av. Francisco de Aguirre 1234, La Serena</li>
+          <li>+56 9 1234 5678</li>
+          <li>contacto@losmaestros.cl</li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor linea-footer">
+      &copy; <span id="anio-actual"></span> Ferretería Los Maestros. Proyecto académico DSY1104 — Desarrollo Fullstack II.
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/registro.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Ferretería Los Maestros</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+        <div id="nav-sesion"></div>
+      </nav>
+      <div class="acciones-nav">
+        <a href="carrito.html" class="enlace-carrito" aria-label="Ver carrito de compras">
+          🛒<span class="contador-carrito" id="carrito-contador">0</span>
+        </a>
+        <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="contenedor" style="max-width:640px;">
+        <p class="migas"><a href="index.html">Inicio</a> / Contacto</p>
+        <div class="titulo-seccion">
+          <h1>Contáctanos</h1>
+          <p>Envíanos tu consulta y te responderemos a la brevedad.</p>
+        </div>
+
+        <form id="form-contacto" novalidate>
+          <div id="alerta-formulario" class="alerta-formulario" role="alert"></div>
+
+          <div class="grupo-campo" data-campo="nombre">
+            <label for="nombre">Nombre completo <span class="requerido">*</span></label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="100" required>
+            <span class="mensaje-error" id="error-nombre"></span>
+          </div>
+
+          <div class="grupo-campo" data-campo="correo">
+            <label for="correo">Correo electrónico <span class="requerido">*</span></label>
+            <input type="email" id="correo" name="correo" autocomplete="email" maxlength="100" placeholder="tu.correo@duoc.cl" required>
+            <small class="ayuda">Solo se aceptan correos @duoc.cl, @profesor.duoc.cl o @gmail.com.</small>
+            <span class="mensaje-error" id="error-correo"></span>
+          </div>
+
+          <div class="grupo-campo" data-campo="comentario">
+            <label for="comentario">Comentario <span class="requerido">*</span></label>
+            <textarea id="comentario" name="comentario" maxlength="500" required></textarea>
+            <small class="ayuda"><span id="contador-comentario">0</span>/500 caracteres</small>
+            <span class="mensaje-error" id="error-comentario"></span>
+          </div>
+
+          <button type="submit" class="boton boton-primario">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sitio-footer">
+    <div class="contenedor columnas-footer">
+      <div>
+        <h3>Ferretería Los Maestros</h3>
+        <p>Materiales de construcción, herramientas y ferretería general en La Serena, Región de Coquimbo.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>Av. Francisco de Aguirre 1234, La Serena</li>
+          <li>+56 9 1234 5678</li>
+          <li>contacto@losmaestros.cl</li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor linea-footer">
+      &copy; <span id="anio-actual"></span> Ferretería Los Maestros. Proyecto académico DSY1104 — Desarrollo Fullstack II.
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/contacto.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

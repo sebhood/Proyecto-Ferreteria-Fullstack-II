@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mantenedor de productos | Ferretería Los Maestros</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="../index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros — Admin
+      </a>
+      <div class="acciones-nav">
+        <span class="texto-sesion">Hola, <span id="admin-nombre-usuario">Administrador</span></span>
+        <a href="#" id="admin-cerrar-sesion" style="color:var(--blanco); font-weight:600;">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="diseno-admin">
+    <aside class="menu-admin">
+      <h2>Administración</h2>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" aria-current="page">Productos</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="../index.html">Ver tienda</a></li>
+      </ul>
+    </aside>
+    <main class="contenido-admin">
+      <div class="cabecera-admin">
+        <h1>Productos</h1>
+        <a href="producto-form.html" class="boton boton-primario">+ Nuevo producto</a>
+      </div>
+
+      <div class="tabla-envoltorio">
+        <table class="tabla-admin">
+          <thead>
+            <tr>
+              <th>Código</th><th>Nombre</th><th>Categoría</th><th>Precio</th><th>Stock</th><th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-productos"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/almacenamiento.js"></script>
+  <script src="../js/admin-guard.js"></script>
+  <script src="../js/admin-productos.js"></script>
+</body>
+</html>

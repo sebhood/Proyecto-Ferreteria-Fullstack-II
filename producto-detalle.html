@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de producto | Ferretería Los Maestros</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros
+      </a>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html" aria-current="page">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div id="nav-sesion"></div>
+      </nav>
+      <div class="acciones-nav">
+        <a href="carrito.html" class="enlace-carrito" aria-label="Ver carrito de compras">
+          🛒<span class="contador-carrito" id="carrito-contador">0</span>
+        </a>
+        <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="contenedor">
+        <p class="migas"><a href="index.html">Inicio</a> / <a href="productos.html">Productos</a> / <span id="miga-producto">Detalle</span></p>
+
+        <div id="contenido-producto">
+          <!-- Contenido generado por js/producto-detalle.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sitio-footer">
+    <div class="contenedor columnas-footer">
+      <div>
+        <h3>Ferretería Los Maestros</h3>
+        <p>Materiales de construcción, herramientas y ferretería general en La Serena, Región de Coquimbo.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>Av. Francisco de Aguirre 1234, La Serena</li>
+          <li>+56 9 1234 5678</li>
+          <li>contacto@losmaestros.cl</li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor linea-footer">
+      &copy; <span id="anio-actual"></span> Ferretería Los Maestros. Proyecto académico DSY1104 — Desarrollo Fullstack II.
+    </div>
+  </footer>
+
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/producto-detalle.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>

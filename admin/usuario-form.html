@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo/editar usuario | Ferretería Los Maestros</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="../index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros — Admin
+      </a>
+      <div class="acciones-nav">
+        <span class="texto-sesion">Hola, <span id="admin-nombre-usuario">Administrador</span></span>
+        <a href="#" id="admin-cerrar-sesion" style="color:var(--blanco); font-weight:600;">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="diseno-admin">
+    <aside class="menu-admin">
+      <h2>Administración</h2>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="usuarios.html" aria-current="page">Usuarios</a></li>
+        <li><a href="../index.html">Ver tienda</a></li>
+      </ul>
+    </aside>
+    <main class="contenido-admin">
+      <h1 id="titulo-formulario">Nuevo usuario</h1>
+
+      <form id="form-usuario" novalidate>
+        <div id="alerta-formulario" class="alerta-formulario" role="alert"></div>
+        <input type="hidden" id="run-original">
+
+        <div class="grupo-campo" data-campo="run">
+          <label for="run">RUN (sin puntos ni guion) <span class="requerido">*</span></label>
+          <input type="text" id="run" name="run" minlength="7" maxlength="9" placeholder="Ej: 123456785" required>
+          <span class="mensaje-error" id="error-run"></span>
+        </div>
+
+        <div class="fila-doble">
+          <div class="grupo-campo" data-campo="nombre">
+            <label for="nombre">Nombre <span class="requerido">*</span></label>
+            <input type="text" id="nombre" name="nombre" maxlength="50" required>
+            <span class="mensaje-error" id="error-nombre"></span>
+          </div>
+          <div class="grupo-campo" data-campo="apellidos">
+            <label for="apellidos">Apellidos <span class="requerido">*</span></label>
+            <input type="text" id="apellidos" name="apellidos" maxlength="100" required>
+            <span class="mensaje-error" id="error-apellidos"></span>
+          </div>
+        </div>
+
+        <div class="grupo-campo" data-campo="correo">
+          <label for="correo">Correo <span class="requerido">*</span></label>
+          <input type="email" id="correo" name="correo" maxlength="100" required>
+          <small class="ayuda">Solo se aceptan correos @duoc.cl, @profesor.duoc.cl o @gmail.com.</small>
+          <span class="mensaje-error" id="error-correo"></span>
+        </div>
+
+        <div class="fila-doble">
+          <div class="grupo-campo" data-campo="fecha-nacimiento">
+            <label for="fecha-nacimiento">Fecha de nacimiento (opcional)</label>
+            <input type="date" id="fecha-nacimiento" name="fechaNacimiento">
+          </div>
+          <div class="grupo-campo" data-campo="tipo-usuario">
+            <label for="tipo-usuario">Tipo de usuario <span class="requerido">*</span></label>
+            <select id="tipo-usuario" name="tipoUsuario" required>
+              <option value="">Seleccione un tipo</option>
+              <option>Administrador</option>
+              <option>Vendedor</option>
+              <option>Cliente</option>
+            </select>
+            <span class="mensaje-error" id="error-tipo-usuario"></span>
+          </div>
+        </div>
+
+        <div class="fila-doble">
+          <div class="grupo-campo" data-campo="region">
+            <label for="region">Región <span class="requerido">*</span></label>
+            <select id="region" name="region" required>
+              <option value="">Seleccione la región</option>
+            </select>
+            <span class="mensaje-error" id="error-region"></span>
+          </div>
+          <div class="grupo-campo" data-campo="comuna">
+            <label for="comuna">Comuna <span class="requerido">*</span></label>
+            <select id="comuna" name="comuna" required disabled>
+              <option value="">Seleccione primero la región</option>
+            </select>
+            <span class="mensaje-error" id="error-comuna"></span>
+          </div>
+        </div>
+
+        <div class="grupo-campo" data-campo="direccion">
+          <label for="direccion">Dirección <span class="requerido">*</span></label>
+          <input type="text" id="direccion" name="direccion" maxlength="300" required>
+          <span class="mensaje-error" id="error-direccion"></span>
+        </div>
+
+        <div class="grupo-campo" data-campo="clave">
+          <label for="clave">Contraseña <span class="requerido">*</span></label>
+          <input type="password" id="clave" name="clave" minlength="4" maxlength="10" required>
+          <small class="ayuda">Entre 4 y 10 caracteres. Al editar, deja el valor para mantener la contraseña actual.</small>
+          <span class="mensaje-error" id="error-clave"></span>
+        </div>
+
+        <button type="submit" class="boton boton-primario">Guardar usuario</button>
+        <a href="usuarios.html" class="boton boton-outline">Cancelar</a>
+      </form>
+    </main>
+  </div>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/almacenamiento.js"></script>
+  <script src="../js/validaciones.js"></script>
+  <script src="../js/admin-guard.js"></script>
+  <script src="../js/admin-usuario-form.js"></script>
+</body>
+</html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferretería Los Maestros | Tienda online</title>
-  <meta name="description" content="Tienda online de Ferretería Los Maestros: materiales de construcción, herramientas y ferretería general en La Serena.">
+  <title>Blog | Ferretería Los Maestros</title>
+  <meta name="description" content="Noticias y consejos de Ferretería Los Maestros.">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -17,10 +17,10 @@
       </a>
       <nav class="nav-principal" aria-label="Navegación principal">
         <ul>
-          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="productos.html">Productos</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="blogs.html" aria-current="page">Blogs</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
         <div id="nav-sesion"></div>
@@ -35,54 +35,30 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="contenedor">
-        <div>
-          <h1>Todo para tu obra, a un clic de distancia</h1>
-          <p>Más de 22 años abasteciendo a contratistas y particulares de La Serena con materiales de construcción, herramientas y ferretería general. Ahora puedes comprar online y retirar en tienda.</p>
-          <div class="acciones-hero">
-            <a href="productos.html" class="boton boton-primario">Ver productos</a>
-            <a href="registro.html" class="boton boton-secundario">Crear cuenta</a>
-          </div>
-        </div>
-        <div class="tarjeta-imagen">
-          <img src="https://images.unsplash.com/photo-1581147036324-c1c9c9c1a3f3?auto=format&fit=crop&w=900&q=60" alt="Estantería de una ferretería con herramientas y materiales ordenados">
-        </div>
-      </div>
-    </section>
-
     <section>
       <div class="contenedor">
+        <p class="migas"><a href="index.html">Inicio</a> / Blog</p>
         <div class="titulo-seccion">
-          <h2>Productos destacados</h2>
-          <p>Una muestra de nuestro catálogo, con precio y disponibilidad actualizados.</p>
+          <h1>Noticias importantes</h1>
         </div>
-        <div class="rejilla-productos" id="rejilla-destacados">
-          <!-- Tarjetas de producto generadas por js/inicio.js -->
-        </div>
-        <div style="text-align:center; margin-top:2rem;">
-          <a href="productos.html" class="boton boton-outline">Ver todo el catálogo</a>
-        </div>
-      </div>
-    </section>
 
-    <section class="seccion-alterna">
-      <div class="contenedor">
-        <div class="titulo-seccion">
-          <h2>¿Por qué comprar con nosotros?</h2>
-        </div>
-        <div class="rejilla">
-          <article class="tarjeta">
-            <h3>Stock actualizado</h3>
-            <p>Revisa la disponibilidad de cada producto antes de venir a retirarlo.</p>
+        <div class="rejilla" style="gap:2rem;">
+          <article class="tarjeta tarjeta-blog">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=60" alt="Herramientas eléctricas sobre una mesa de trabajo">
+            <div>
+              <h2>5 herramientas eléctricas que todo maestro debería tener</h2>
+              <p>Un repaso por las herramientas eléctricas más usadas en obra y cómo elegir la que más te conviene según el trabajo.</p>
+              <a href="blog-detalle-1.html" class="boton boton-outline">Leer más</a>
+            </div>
           </article>
-          <article class="tarjeta">
-            <h3>Cuenta de cliente</h3>
-            <p>Regístrate para agilizar tus próximas compras y ver tu historial.</p>
-          </article>
-          <article class="tarjeta">
-            <h3>Atención cercana</h3>
-            <p>22 años de trayectoria familiar atendiendo a contratistas y particulares en La Serena.</p>
+
+          <article class="tarjeta tarjeta-blog">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=500&q=60" alt="Pared recién pintada con rodillo apoyado">
+            <div>
+              <h2>Cómo elegir la pintura correcta para tu proyecto</h2>
+              <p>Diferencias entre látex y esmalte, y consejos para calcular cuánta pintura necesitas para tu obra.</p>
+              <a href="blog-detalle-2.html" class="boton boton-outline">Leer más</a>
+            </div>
           </article>
         </div>
       </div>
@@ -121,8 +97,6 @@
 
   <script src="js/datos.js"></script>
   <script src="js/almacenamiento.js"></script>
-  <script src="js/productos-ui.js"></script>
-  <script src="js/inicio.js"></script>
   <script src="js/nav.js"></script>
 </body>
 </html>

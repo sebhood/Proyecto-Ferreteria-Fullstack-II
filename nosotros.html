@@ -15,15 +15,22 @@
         <span class="icono-marca" aria-hidden="true">🔨</span>
         Ferretería Los Maestros
       </a>
-      <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
       <nav class="nav-principal" aria-label="Navegación principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="productos.html">Productos</a></li>
           <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
-          <li><a href="cotizar.html">Cotizar</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
+        <div id="nav-sesion"></div>
       </nav>
+      <div class="acciones-nav">
+        <a href="carrito.html" class="enlace-carrito" aria-label="Ver carrito de compras">
+          🛒<span class="contador-carrito" id="carrito-contador">0</span>
+        </a>
+        <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+      </div>
     </div>
   </header>
 
@@ -43,42 +50,30 @@
     <section class="seccion-alterna">
       <div class="contenedor">
         <div class="titulo-seccion">
-          <h2>Cómo trabajamos</h2>
+          <h2>El equipo</h2>
         </div>
-        <table class="tabla-info">
-          <thead>
-            <tr>
-              <th scope="col">Actor</th>
-              <th scope="col">Rol</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Cliente particular</td>
-              <td>Compra para uso en su hogar, atendido directamente por un vendedor.</td>
-            </tr>
-            <tr>
-              <td>Contratista / Maestro de obra</td>
-              <td>Compra en volumen de forma frecuente; puede acceder a cuenta corriente.</td>
-            </tr>
-            <tr>
-              <td>Vendedor / Empleado</td>
-              <td>Atiende clientes, revisa stock y registra las ventas.</td>
-            </tr>
-            <tr>
-              <td>Dueño</td>
-              <td>Gestiona compras a proveedores y controla el inventario general.</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>Don Manuel</h3>
+            <p>Dueño y fundador. Gestiona compras a proveedores y controla el inventario general.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Felipe</h3>
+            <p>Hijo del dueño, encargado de ventas mayoristas y atención a contratistas.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>Equipo de mesón</h3>
+            <p>Dos vendedores de planta que atienden a clientes particulares y gestionan el stock diario.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section>
       <div class="contenedor">
         <div class="titulo-seccion">
-          <h2>Ubicación y zona de despacho</h2>
-          <p>Visítanos en tienda o revisa si tu obra está dentro de nuestra zona de despacho a domicilio.</p>
+          <h2>Ubicación</h2>
+          <p>Visítanos en tienda, en pleno centro de La Serena.</p>
         </div>
         <div class="envoltorio-mapa">
           <iframe
@@ -100,9 +95,10 @@
         <h3>Navegación</h3>
         <ul>
           <li><a href="index.html">Inicio</a></li>
-          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="productos.html">Productos</a></li>
           <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="cotizar.html">Cotizar</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </div>
       <div>
@@ -119,6 +115,8 @@
     </div>
   </footer>
 
-  <script src="js/comun.js"></script>
+  <script src="js/datos.js"></script>
+  <script src="js/almacenamiento.js"></script>
+  <script src="js/nav.js"></script>
 </body>
 </html>

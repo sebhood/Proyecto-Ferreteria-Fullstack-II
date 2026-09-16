@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de administración | Ferretería Los Maestros</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="../index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros — Admin
+      </a>
+      <div class="acciones-nav">
+        <span class="texto-sesion">Hola, <span id="admin-nombre-usuario">Administrador</span></span>
+        <a href="#" id="admin-cerrar-sesion" style="color:var(--blanco); font-weight:600;">Cerrar sesión</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="diseno-admin">
+    <aside class="menu-admin">
+      <h2>Administración</h2>
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="../index.html">Ver tienda</a></li>
+      </ul>
+    </aside>
+    <main class="contenido-admin">
+      <h1>¡Hola, Administrador!</h1>
+      <p>Desde este panel puedes gestionar el catálogo de productos y los usuarios del sistema.</p>
+      <div class="rejilla">
+        <article class="tarjeta">
+          <h3 id="total-productos">0</h3>
+          <p>Productos en catálogo</p>
+        </article>
+        <article class="tarjeta">
+          <h3 id="total-stock-critico">0</h3>
+          <p>Productos con stock bajo el crítico</p>
+        </article>
+        <article class="tarjeta">
+          <h3 id="total-usuarios">0</h3>
+          <p>Usuarios registrados</p>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/datos.js"></script>
+  <script src="../js/almacenamiento.js"></script>
+  <script src="../js/admin-guard.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const productos = obtenerProductos();
+      document.getElementById('total-productos').textContent = productos.length;
+      document.getElementById('total-stock-critico').textContent =
+        productos.filter(p => p.stockCritico != null && p.stock <= p.stockCritico).length;
+      document.getElementById('total-usuarios').textContent = obtenerUsuarios().length;
+    });
+  </script>
+</body>
+</html>
