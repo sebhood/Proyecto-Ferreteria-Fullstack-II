@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | Ferretería Los Maestros</title>
+  <meta name="description" content="Historia, equipo y ubicación de Ferretería Los Maestros en La Serena.">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="sitio-header">
+    <div class="contenedor barra-superior">
+      <a href="index.html" class="marca">
+        <span class="icono-marca" aria-hidden="true">🔨</span>
+        Ferretería Los Maestros
+      </a>
+      <button class="boton-menu" aria-label="Abrir menú de navegación" aria-expanded="false">☰</button>
+      <nav class="nav-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+          <li><a href="cotizar.html">Cotizar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="contenedor">
+        <p class="migas"><a href="index.html">Inicio</a> / Nosotros</p>
+        <article>
+          <h1>Nuestra historia</h1>
+          <p>Ferretería Los Maestros es un negocio familiar ubicado en La Serena, Región de Coquimbo, con <strong>22 años de trayectoria</strong>. Es atendido por el dueño, su hijo y dos empleados de planta. Vendemos materiales de construcción, herramientas eléctricas y manuales, gasfitería, electricidad y artículos de ferretería general.</p>
+          <p>Nuestros principales clientes son particulares que compran para sus hogares y contratistas o maestros de obra que compran con mayor frecuencia y en volúmenes más grandes. Nuestro catálogo actual supera las <strong>800 referencias</strong>.</p>
+          <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=1000&q=60" alt="Interior de una ferretería con pasillos de productos y herramientas">
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion-alterna">
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <h2>Cómo trabajamos</h2>
+        </div>
+        <table class="tabla-info">
+          <thead>
+            <tr>
+              <th scope="col">Actor</th>
+              <th scope="col">Rol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cliente particular</td>
+              <td>Compra para uso en su hogar, atendido directamente por un vendedor.</td>
+            </tr>
+            <tr>
+              <td>Contratista / Maestro de obra</td>
+              <td>Compra en volumen de forma frecuente; puede acceder a cuenta corriente.</td>
+            </tr>
+            <tr>
+              <td>Vendedor / Empleado</td>
+              <td>Atiende clientes, revisa stock y registra las ventas.</td>
+            </tr>
+            <tr>
+              <td>Dueño</td>
+              <td>Gestiona compras a proveedores y controla el inventario general.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="contenedor">
+        <div class="titulo-seccion">
+          <h2>Ubicación y zona de despacho</h2>
+          <p>Visítanos en tienda o revisa si tu obra está dentro de nuestra zona de despacho a domicilio.</p>
+        </div>
+        <div class="envoltorio-mapa">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-71.28%2C-29.92%2C-71.22%2C-29.88&layer=mapnik&marker=-29.9027%2C-71.2519"
+            title="Mapa de ubicación de Ferretería Los Maestros en La Serena" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sitio-footer">
+    <div class="contenedor columnas-footer">
+      <div>
+        <h3>Ferretería Los Maestros</h3>
+        <p>Materiales de construcción, herramientas y ferretería general en La Serena, Región de Coquimbo.</p>
+      </div>
+      <div>
+        <h3>Navegación</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="cotizar.html">Cotizar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contacto</h3>
+        <ul>
+          <li>Av. Francisco de Aguirre 1234, La Serena</li>
+          <li>+56 9 1234 5678</li>
+          <li>contacto@losmaestros.cl</li>
+        </ul>
+      </div>
+    </div>
+    <div class="contenedor linea-footer">
+      &copy; <span id="anio-actual"></span> Ferretería Los Maestros. Proyecto académico DSY1104 — Desarrollo Fullstack II.
+    </div>
+  </footer>
+
+  <script src="js/comun.js"></script>
+</body>
+</html>
